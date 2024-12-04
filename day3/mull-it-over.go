@@ -9,8 +9,8 @@ import (
 	"strconv"
 )
 
-func read_input(input_file string) string {
-	file, err := os.Open(input_file)
+func readInput(inputFile string) string {
+	file, err := os.Open(inputFile)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -37,15 +37,15 @@ func get_mul_sum(matches [][]string) int {
 			continue
 		}
 
-		val_1, err := strconv.Atoi(match[1])
+		value1, err := strconv.Atoi(match[1])
 		if err != nil {
 			log.Fatal(err)
 		}
-		val_2, err := strconv.Atoi(match[2])
+		value2, err := strconv.Atoi(match[2])
 		if err != nil {
 			log.Fatal(err)
 		}
-		value += val_1 * val_2
+		value += value1 * value2
 	}
 	return value
 }
@@ -54,17 +54,17 @@ func main() {
 	r1 := regexp.MustCompile(`mul\(([\d]+),([\d]+)\)`)
 	r2 := regexp.MustCompile(`do\(\)|don't\(\)|mul\(([\d]+),([\d]+)\)`)
 	fmt.Println("Test Input")
-	input := read_input("test-input.txt")
+	input := readInput("test-input.txt")
 	matches := r1.FindAllStringSubmatch(input, -1)
 	fmt.Println("Total Value:", get_mul_sum(matches))
-	input = read_input("test-input-2.txt")
+	input = readInput("test-input-2.txt")
 	matches = r2.FindAllStringSubmatch(input, -1)
 	fmt.Println("Total Value (do(), don't()):", get_mul_sum(matches))
 
 	fmt.Println()
 
 	fmt.Println("Puzzle Input")
-	input = read_input("input.txt")
+	input = readInput("input.txt")
 	matches = r1.FindAllStringSubmatch(input, -1)
 	fmt.Println("Total Value:", get_mul_sum(matches))
 	matches = r2.FindAllStringSubmatch(input, -1)

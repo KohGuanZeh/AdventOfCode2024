@@ -10,8 +10,8 @@ import (
 	"strings"
 )
 
-func get_slices(input_file string) (l1 []int, l2 []int) {
-	file, err := os.Open(input_file)
+func getSlices(inputFile string) (l1 []int, l2 []int) {
+	file, err := os.Open(inputFile)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -38,27 +38,27 @@ func get_slices(input_file string) (l1 []int, l2 []int) {
 	return l1, l2
 }
 
-func dist_diff(l1 []int, l2 []int) (dist_diff int) {
-	dist_diff = 0
+func difference(l1 []int, l2 []int) (difference int) {
+	difference = 0
 	for i := 0; i < len(l1); i++ {
 		diff := l1[i] - l2[i]
 		if diff < 0 {
 			diff *= -1
 		}
-		dist_diff += diff
+		difference += diff
 	}
-	return dist_diff
+	return difference
 }
 
-func sim_score(l1 []int, l2 []int) (sim_score int) {
-	sim_score = 0
+func similarity(l1 []int, l2 []int) (similarity int) {
+	similarity = 0
 
 	i2 := 0
 	count := 0
 
 	for key, val := range l1 {
 		if key > 0 && val == l1[key-1] {
-			sim_score += count * val
+			similarity += count * val
 			continue
 		}
 
@@ -75,31 +75,31 @@ func sim_score(l1 []int, l2 []int) (sim_score int) {
 			}
 		}
 
-		sim_score += count * val
+		similarity += count * val
 	}
 
-	return sim_score
+	return similarity
 }
 
 // Program starts here
 func main() {
-	l1, l2 := get_slices("test-input.txt")
+	l1, l2 := getSlices("test-input.txt")
 
 	slices.Sort(l1)
 	slices.Sort(l2)
 
 	fmt.Println("Test Input")
-	fmt.Println("Total Distance:", dist_diff(l1, l2))
-	fmt.Println("Similarity Score:", sim_score(l1, l2))
+	fmt.Println("Total Distance:", difference(l1, l2))
+	fmt.Println("Similarity Score:", similarity(l1, l2))
 
 	fmt.Println("")
 
-	l1, l2 = get_slices("input.txt")
+	l1, l2 = getSlices("input.txt")
 
 	slices.Sort(l1)
 	slices.Sort(l2)
 
 	fmt.Println("Puzzle Input")
-	fmt.Println("Total Distance:", dist_diff(l1, l2))
-	fmt.Println("Similarity Score:", sim_score(l1, l2))
+	fmt.Println("Total Distance:", difference(l1, l2))
+	fmt.Println("Similarity Score:", similarity(l1, l2))
 }
