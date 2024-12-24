@@ -1,0 +1,402 @@
+z00: y00 XOR x00
+
+
+z01: rjr XOR sgt
+
+rjr: y00 AND x00
+
+sgt: x01 XOR y01
+
+
+z02: fkm XOR hvb
+
+fkm: hqg OR cff
+hqg: x01 AND y01
+cff: rjr AND sgt
+
+hvb: y02 XOR x02
+
+
+z03: bdp XOR thv
+
+bdp: hnv OR rbm
+hnv: fkm AND hvb
+rbm: x02 AND y02
+
+thv: y03 XOR x03
+
+
+z04: stt XOR cmh
+
+stt: x04 XOR y04
+
+cmh: bfs OR rvq
+bfs: y03 AND x03
+rvq: thv AND bdp
+
+
+z05: ngj XOR pqj
+
+ngj: mwj OR pmq
+mwj: stt AND cmh
+pmq: x04 AND y04
+
+pqj: y05 XOR x05
+
+
+z06: wts XOR vrh
+
+wts: rkt OR ckj
+rkt: y05 AND x05
+ckj: ngj AND pqj
+
+vrh: x06 XOR y06
+
+
+z07: swp XOR fcs
+
+swp: mcs OR jwh
+mcs: vrh AND wts
+jwh: y06 AND x06
+
+fcs: x07 XOR y07
+
+
+z08: kpt XOR prr
+
+kpt: jdb OR btb
+jdb: fcs AND swp
+btb: y07 AND x07
+
+prr: x08 XOR y08
+
+
+z09: kmk XOR qvw
+
+kmk: y09 XOR x09
+
+qvw: mkj OR rdt
+mkj: x08 AND y08
+rdt: kpt AND prr
+
+
+z10: wvn XOR trw
+
+wvn: y10 XOR x10
+
+trw: qfq OR spq
+qfq: qvw AND kmk
+spq: y09 AND x09
+
+
+z11: nvc XOR tgd
+
+nvc: vrj OR cvp
+vrj: x10 AND y10
+cvp: trw AND wvn
+
+tgd: x11 XOR y11
+
+
+z12: stg XOR trp
+
+stg: tst OR jnn
+tst: y11 AND x11
+jnn: tgd AND nvc
+
+trp: y12 XOR x12
+
+
+z13: hnt XOR wnj
+
+hnt: x13 XOR y13
+
+wnj: fmk OR dbr
+fmk: stg AND trp
+dbr: y12 AND x12
+
+
+z14: vsd XOR nmb
+
+vsd: mkh OR qdw
+mkh: x13 AND y13
+qdw: wnj AND hnt
+
+nmb: y14 XOR x14
+
+
+z15: nhg XOR prp
+
+nhg: y15 XOR x15
+
+prp: csh OR smm
+csh: vsd AND nmb
+smm: x14 AND y14
+
+
+z16: hdg XOR qpj
+
+hdg: ckp OR wbt
+ckp: prp AND nhg
+wbt: y15 AND x15
+
+qpj: y16 XOR x16
+
+
+z17: pbr XOR pch
+
+pbr: y17 XOR x17
+
+pch: dhg OR bpn
+dhg: hdg AND qpj
+bpn: y16 AND x16
+
+
+z18: mdg XOR jss
+
+mdg: rrb OR dpj
+rrb: pbr AND pch
+dpj: y17 AND x17
+
+jss: x18 XOR y18
+
+
+z19: pfb XOR jmh
+
+pfb: hmt OR jcr
+hmt: jss AND mdg
+jcr: y18 AND x18
+
+jmh: x19 XOR y19
+
+
+z20: scv XOR mbp
+
+scv: nts OR wrc
+nts: jmh AND pfb
+wrc: x19 AND y19
+
+mbp: y20 XOR x20
+
+
+z21: pdc XOR gbs
+
+pdc: tpm OR jqj
+tpm: mbp AND scv
+jqj: y20 AND x20
+
+gbs: y21 XOR x21
+
+
+z22: svq XOR tmk
+
+svq: y22 XOR x22
+
+tmk: fff OR pgr
+fff: gbs AND pdc
+pgr: x21 AND y21
+
+
+z23: kvp XOR pcv
+
+kvp: btw OR gsg
+btw: svq AND tmk
+gsg: y22 AND x22
+
+pcv: x23 XOR y23
+
+
+z24: fhw XOR nkc
+
+fhw: npr OR jnh
+npr: y23 AND x23
+jnh: kvp AND pcv
+
+nkc: x24 XOR y24
+
+
+z25: tsw XOR vst
+
+tsw: y25 XOR x25
+
+vst: ngb OR krb
+ngb: nkc AND fhw
+krb: y24 AND x24
+
+
+z26: cbj XOR fnf
+
+cbj: hcp OR jgn
+hcp: y25 AND x25
+jgn: vst AND tsw
+
+fnf: y26 XOR x26
+
+
+z27: ntr XOR gcc
+
+ntr: x27 XOR y27
+
+gcc: jcb OR pnj
+jcb: y26 AND x26
+pnj: cbj AND fnf
+
+
+z28: mkq XOR bfq
+
+mkq: y28 XOR x28
+
+bfq: vgg OR pph
+vgg: x27 AND y27
+pph: gcc AND ntr
+
+
+z29: mcb XOR ftt
+
+mcb: qfw OR pms
+qfw: x28 AND y28
+pms: bfq AND mkq
+
+ftt: y29 XOR x29
+
+
+z30: qrt XOR hhd
+
+qrt: y30 XOR x30
+
+hhd: wmd OR bsk
+wmd: ftt AND mcb
+bsk: y29 AND x29
+
+
+z31: fqh XOR ctc
+
+fqh: x31 XOR y31
+
+ctc: nww OR spj
+nww: y30 AND x30
+spj: hhd AND qrt
+
+
+z32: qhp XOR vbw
+
+qhp: hkh OR rjt
+hkh: y31 AND x31
+rjt: fqh AND ctc
+
+vbw: y32 XOR x32
+
+
+z33: rqf XOR grt
+
+rqf: y33 XOR x33
+
+grt: nwj OR smg
+nwj: x32 AND y32
+smg: vbw AND qhp
+
+
+z34: hkt XOR qrn
+
+hkt: hbq OR twj
+hbq: grt AND rqf
+twj: x33 AND y33
+
+qrn: x34 XOR y34
+
+
+z35: rfw XOR qnw
+
+rfw: qdd OR gck
+qdd: hkt AND qrn
+gck: y34 AND x34
+
+qnw: x35 XOR y35
+
+
+z36: wgm XOR rfv
+
+wgm: kps OR wvq
+kps: y35 AND x35
+wvq: rfw AND qnw
+
+rfv: y36 XOR x36
+
+
+z37: ngq XOR cgm
+
+ngq: y37 XOR x37
+
+cgm: jwd OR ssg
+jwd: rfv AND wgm
+ssg: x36 AND y36
+
+
+z38: crj XOR vvr
+
+crj: y38 XOR x38
+
+vvr: kqm OR vdw
+kqm: x37 AND y37
+vdw: ngq AND cgm
+
+
+z39: hsf XOR bng
+
+hsf: mdm OR cwb
+mdm: vvr AND crj
+cwb: y38 AND x38
+
+// ERROR HERE
+bng: y39 AND x39
+
+
+z40: vbm XOR qqb
+
+vbm: tkf OR fjp
+tkf: bng AND hsf
+// ERROR HERE
+fjp: x39 XOR y39
+
+qqb: x40 XOR y40
+
+
+z41: dsb XOR rgt
+
+dsb: x41 XOR y41
+
+rgt: dnr OR nhq
+dnr: y40 AND x40
+nhq: vbm AND qqb
+
+
+z42: swn XOR jkm
+
+swn: hrh OR vtn
+hrh: y41 AND x41
+vtn: rgt AND dsb
+
+jkm: y42 XOR x42
+
+
+z43: jtb XOR bkf
+
+jtb: y43 XOR x43
+
+bkf: tbg OR jfp
+tbg: swn AND jkm
+jfp: x42 AND y42
+
+
+z44: tfj XOR bcg
+
+tfj: dcp OR dmk
+dcp: x43 AND y43
+dmk: jtb AND bkf
+
+bcg: x44 XOR y44
+
+
+z45: fnd OR scp
+fnd: x44 AND y44
+scp: tfj AND bcg
